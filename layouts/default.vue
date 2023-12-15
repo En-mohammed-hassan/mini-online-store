@@ -4,7 +4,7 @@
 			<nav class="container pt-1 mx-auto flex justify-between">
 				<button>
 					<nuxt-link to="/">
-						<i class="material-icons text-sky-400 text-5xl">home</i>
+						<i class="material-icons text-sky-400 text-4xl">home</i>
 					</nuxt-link>
 				</button>
 
