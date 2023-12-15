@@ -15,6 +15,5 @@
 	const { data: products } = await useFetch(
 		"https://fakestoreapi.com/products"
 	);
-	
 </script>
 <style lang=""></style>
