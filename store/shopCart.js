@@ -39,13 +39,13 @@ export const useShopeStore = defineStore("shopstore", {
 			});
 			if (this.cart[FOUND].count == 1) {
 				this.cart = this.cart.filter((e) => {
-					return !e.id == i;
+					return e.id !== i;
 				});
 				console.log("filter");
 			} else {
 				this.cart[FOUND].count -= 1;
 			}
-
+			console.log(this.cart);
 		},
 	},
 });
