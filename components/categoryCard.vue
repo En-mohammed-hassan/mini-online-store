@@ -1,6 +1,6 @@
 <template>
 	<div class="card text-center trans">
-		<p class="mb-3 text-xl truncate">{{ category }}</p>
+		<p class="mb-3 text-xl max-w-xs m-auto truncate">{{ category }}</p>
 		<img class="thump" :src="`/images/${category}.jpg`" :alt="category" />
 		<nuxt-link :to="`/category/${category}`">
 			<button class="btn mx-auto text-center mt-4">show products</button>

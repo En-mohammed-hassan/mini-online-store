@@ -7,6 +7,12 @@
 						<i class="material-icons text-sky-400 text-4xl">home</i>
 					</nuxt-link>
 				</button>
+				<div class="flex w-fit m-auto">
+					<nuxt-link class="flex" to="/counter">
+						<i class="material-icons mr-2">add_shopping_cart</i> total :
+						{{ Math.floor(store.bill) }}</nuxt-link
+					>
+				</div>
 
 				<button @click="showlist()" class="sm:hidden">
 					<span class="material-icons text-4xl">list</span>
@@ -21,6 +27,7 @@
 			</nav>
 		</header>
 	</div>
+
 	<div
 		v-show="show"
 		class="bg-gray-200 text-center transition duration-700 ease-in-out"
@@ -57,6 +64,10 @@
 			},
 		},
 	};
+</script>
+<script setup>
+	import { useShopeStore } from "~~/store/shopCart";
+	const store = useShopeStore();
 </script>
 <style scoped>
 	.router-link-exact-active {

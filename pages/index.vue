@@ -10,6 +10,7 @@
 			</li>
 		</ul>
 	</div>
+
 </template>
 <script setup>
 	const { data: category } = await useFetch(

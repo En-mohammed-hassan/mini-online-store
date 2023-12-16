@@ -4,12 +4,14 @@
 			<div class="m-4">
 				<div class="flex justify-between">
 					<div class="flex btn w-fit">
-						<i class="material-icons mr-2">add_shopping_cart</i>
-						<span>Add to cart</span>
+						<button @click="store.push(product.id, product.price)" class="flex">
+							<i class="material-icons mr-2">add_shopping_cart</i>
+							Add to cart
+						</button>
 					</div>
 					<nuxt-link class="flex btn w-fit" to="/">
 						<i class="material-icons mr-2">arrow_back</i>
-						Go Home
+						Go home
 					</nuxt-link>
 				</div>
 				<h3 class="mx-auto py-5 mt-4 text-4xl">{{ product.title }}</h3>
@@ -24,6 +26,8 @@
 	</div>
 </template>
 <script setup>
+	import { useShopeStore } from "~~/store/shopCart";
+	const store = useShopeStore();
 	const { product } = defineProps(["product"]);
 </script>
 <style scoped>
