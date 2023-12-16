@@ -1,6 +1,6 @@
 <template>
 	<div class="card text-center trans">
-		<p class="mb-2 max-w-[60%] m-auto truncate">
+		<p class="mb-2 max-w-xs m-auto truncate">
 			{{ product.title }}
 		</p>
 		<p class="m-2">{{ product.price }} $</p>
