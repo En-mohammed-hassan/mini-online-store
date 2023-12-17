@@ -17,6 +17,7 @@
 		</div>
 	</div>
 </template>
+
 <script setup>
 	const { product, count } = defineProps(["product", "count"]);
 	import { useShopeStore } from "~~/store/shopCart";

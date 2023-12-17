@@ -15,7 +15,7 @@
 <script setup>
 	import { useShopeStore } from "~~/store/shopCart";
 	const store = useShopeStore();
-	const { data: products } = await useFetch(
+	const { data: products } =  await useFetch(
 		"https://fakestoreapi.com/products"
 	);
 </script>

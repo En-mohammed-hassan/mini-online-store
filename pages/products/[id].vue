@@ -1,5 +1,5 @@
 <template lang="">
-<description :product="product"/>
+	<description :product="product" />
 </template>
 <script setup>
 	const { id } = useRoute().params;

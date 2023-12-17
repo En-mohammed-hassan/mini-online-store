@@ -10,10 +10,9 @@
 			</li>
 		</ul>
 	</div>
-
 </template>
 <script setup>
-	const { data: category } = await useFetch(
+	const { data: category } =await useFetch(
 		"https://fakestoreapi.com/products/categories"
 	);
 </script>

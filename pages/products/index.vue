@@ -12,7 +12,7 @@
 	</div>
 </template>
 <script setup>
-	const { data: products } = await useFetch(
+	const { data: products } =  await useFetch(
 		"https://fakestoreapi.com/products"
 	);
 </script>
