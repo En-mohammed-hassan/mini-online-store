@@ -6,7 +6,10 @@
 		<p class="m-2">{{ product.price }} $</p>
 		<img class="thump" :src="product.image" alt="" />
 		<div class="flex justify-between">
-			<button @click="store.Delete(product.id,product.price)" class="btn bg-red-400">
+			<button
+				@click="store.Delete(product.id, product.price)"
+				class="btn bg-red-400"
+			>
 				Delete
 			</button>
 			<p>

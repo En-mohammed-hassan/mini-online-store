@@ -1,19 +1,21 @@
-<template lang="">
-	<div>
-		<ul>
-			<li>
-				<div class="grid lg:grid-cols-4 sm:grid-cols-2 gap-5">
-					<div v-for="cat in category">
-						<categoryCard :category="cat" />
-					</div>
-				</div>
-			</li>
-		</ul>
-	</div>
-</template>
+<template lang=""></template>
 <script setup>
-	const { data: category } =await useFetch(
-		"https://fakestoreapi.com/products/categories"
+	import { useUserStore } from "~~/store/user";
+	// const user = useUserStore();
+	// if (process.client && localStorage.getItem("user")) {
+	// 	user.local();
+	// 	if (user.HasToken()) {
+	// 		navigateTo("/home");
+	// 	}
+	// }
+	definePageMeta({
+		layout: "guest",
+	});
+
+	const { pending, data: category } = useFetch(
+		"https://fakestoreapi.com/products/categories",
+		{ lazy: true }
 	);
+
 </script>
 <style lang=""></style>
