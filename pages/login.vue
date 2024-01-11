@@ -146,9 +146,7 @@
 				responseData.value.token
 			);
 			if (process.client) {
-				console.log(user);
-				console.log(JSON.stringify(user));
-				// user.tolocal();
+				user.tolocal();
 			}
 		} else {
 			error.value = "Email or passwoed dosent match";

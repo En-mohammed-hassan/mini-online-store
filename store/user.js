@@ -21,14 +21,13 @@ export const useUserStore = defineStore("user", {
 			else return true;
 		},
 		tolocal() {
-			localStorage.setItem("user", JSON.stringify(this));
+			localStorage.setItem("user", JSON.stringify(this.$state));
 		},
-		delete(){
-			this.id=""
-			this.name=""
-			this.token=""
-			localStorage.removeItem("user")
-
-		}
+		delete() {
+			this.id = "";
+			this.name = "";
+			this.token = "";
+			localStorage.removeItem("user");
+		},
 	},
 });
