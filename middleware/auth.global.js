@@ -5,20 +5,6 @@ export default defineNuxtRouteMiddleware((to, from) => {
 	if (process.client && localStorage.getItem("user")) {
 		user.local();
 	}
-	console.log(`from ${from.fullPath}`);
-	console.log(`from ${to.fullPath}`);
-
-	// 	if (user.HasToken()) {
-	// 		navigateTo("/home");
-	// 	}
-	// 	console.log("middleware");
-	// } else {
-	// 	console.log(console.log(":middleware2"));
-	// }
-	// if (to.fullPath == from.fullPath) {
-	// 	console.log("helw");
-	// 	return;
-	// }
 
 	if (user.HasToken()) {
 		switch (to.fullPath) {
@@ -33,7 +19,6 @@ export default defineNuxtRouteMiddleware((to, from) => {
 			case "/signup":
 				return navigateTo("/home");
 		}
-		// flag = true;
 	} else {
 		switch (to.fullPath) {
 			case "/home":
@@ -51,24 +36,5 @@ export default defineNuxtRouteMiddleware((to, from) => {
 			case "/category":
 				return navigateTo("/guest");
 		}
-		// flag = true;
 	}
-	// if (flag) {
-	// 	abortNavigation();
-	// }
-	// 	if (to.fullPath == from.fullPath && to.fullPath != "/") {
-	// 		return navigateTo("/");
-	// 	}
-	// 	if (to.fullPath == "/" && !user.HasToken()) {
-	// 		return;
-	// 	}
-	// 	if (to.fullPath == "/" && user.HasToken()) {
-	// 		return abortNavigation();
-	// 	}
-
-	// 	if (from.fullPath == "/" && !user.HasToken()) {
-	// 		return abortNavigation();
-	// 	}
-	// 	if (from.fullPath == "/" && user.HasToken()) {
-	// // 	}
 });
