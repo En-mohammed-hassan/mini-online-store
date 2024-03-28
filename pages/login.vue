@@ -122,7 +122,7 @@
 
 	const signIn = async () => {
 		const { data: responseData } = await useFetch(
-			"https://en-mhd-has.000webhostapp.com/api/login",
+			"https://api-nuxt.mhd-hasan.com/api/login",
 			{
 				headers: {
 					"Content-Type": "application/x-www-form-urlencoded",
