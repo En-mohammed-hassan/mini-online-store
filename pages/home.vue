@@ -2,7 +2,6 @@
 	<loading v-if="pending" />
 
 	<div v-else>
-		<h1>sdasdasdasdasd</h1>
 		<ul>
 			<li>
 				<div class="grid lg:grid-cols-4 sm:grid-cols-2 gap-5">
